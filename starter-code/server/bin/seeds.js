@@ -1,5 +1,6 @@
 const JournalEntry = require('../models/journal-entry');
 const mongoose     = require('mongoose');
+
 mongoose.connect('mongodb://localhost/journal-development');
 
 const entries = [

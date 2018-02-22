@@ -1,5 +1,6 @@
 const express       = require('express');
 const router        = express.Router();
+
 const Entry         = require('../../models/journal-entry');
 
 router.get('/journal-entries', (req, res, next) => {
