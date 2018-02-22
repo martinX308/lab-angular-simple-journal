@@ -12,7 +12,13 @@ export class RetrieveEntriesService {
   getEntries(): Promise<any>  {
     return this.http.get(`${this.API_URL}/journal-entries`)
          .toPromise()
-         .then((res: Response) => res.json())
+         .then((res: Response) => res.json());
+  }
+  
+  getSingleEntry(id): Promise<any>  {
+    return this.http.get(`${this.API_URL}/journal-entries/${id}`)
+         .toPromise()
+         .then((res: Response) => res.json());
   }
 
 }

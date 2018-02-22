@@ -4,7 +4,7 @@
 
 <ul>
   <li *ngFor="let item of entryList">
-    <p>{{item.title}}</p>
+    <a [routerLink]="['/journal-entries',item._id]"><p>{{item.title}}</p></a>
     <p>{{item.date}}</p>
   </li>
 </ul>

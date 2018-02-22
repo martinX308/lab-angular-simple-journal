@@ -6,20 +6,22 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { EntryListComponent } from './components/entry-list/entry-list.component';
+import { SingleEntryComponent } from './components/single-entry/single-entry.component';
 
 import {RetrieveEntriesService} from './services/retrieve-entries.service';
 
 
 const routes: Routes = [
   { path: '',  component: EntryListComponent },
-  
+  { path: 'journal-entries/:id',  component: SingleEntryComponent },
  ];
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    EntryListComponent
+    EntryListComponent,
+    SingleEntryComponent
   ],
   imports: [
     BrowserModule,
